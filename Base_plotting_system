@@ -1,0 +1,12 @@
+par(mfrow = c(2, 3))
+
+plot(cars$speed, cars$dist, main = "Car speed vs. braking distance", xlab = "Speed", ylab = "Dist")
+
+hist(cars$speed, main = "Distribution of speed variable", xlab = "Speed")
+hist(cars$dist, main = "Distribution of dist variable", xlab = "Dist")
+
+boxplot(cars$speed, main = "Distribution of speed variable")
+boxplot(cars$dist, main = "Distribution of dist variable")
+
+vehicle_names <- row.names(mtcars)
+barplot(mtcars$hp, names = vehicle_names, main = "Horse power for each vehicles", xlab = "Horse power", ylab = "Vehicles", horiz = TRUE)
